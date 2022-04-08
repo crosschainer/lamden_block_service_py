@@ -1,8 +1,15 @@
+from db import mongo_connector
+
 class BlockService:
-    port = 1337
-    
-    def startup():
+    blockservice_port = None
+
+    masternode = "https://masternode-01.lamden.io"
+
+    def getNewBlocks(currentBlock):
         pass
+    
+    def startup(self, port):
+        self.blockservice_port = port
 
 blockservice = BlockService()
-blockservice.startup()
+blockservice.startup(port=1337)
